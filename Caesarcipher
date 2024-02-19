@@ -1,0 +1,16 @@
+def encrypt_message(message, n):
+    new_message='' 
+    for ch in message:
+      new_message+=chr(ord(ch)+n)
+    return new_message
+def decrypt_message(message,n):
+    new_message=''
+    for ch in message:
+     new_message+=chr(ord(ch)-n)
+    return new_message
+n=3
+message=input("enter message: ")
+encrypted_message = encrypt_message(message,n)
+print("encrypted message: "+encrypted_message)
+decrypted_message = decrypt_message(encrypted_message,n)
+print("decrypted message: "+decrypted_message)
